@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "string.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
+//#include "freertos/FreeRTOS.h"
+//#include "freertos/task.h"
 #include "ssd1306.h"
 //#include "lora.h"
 
@@ -45,7 +45,7 @@ void screen_print(char * str, int page) {
 
       sprintf(packets_count, "Count: %d", packets);
       sprintf(rssi_str, "RSSI: %d dBm", rssi);
-      /* screen_print(packets_count, 0);
+      screen_print(packets_count, 0);
       screen_print(rssi_str, 1);
     }
     vTaskDelay(1);
