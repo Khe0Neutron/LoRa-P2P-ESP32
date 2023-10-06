@@ -13,7 +13,7 @@ int packets = 0;
 int rssi = 0;
 
 void screen_init() {
-  i2c_master_init(&screen, CONFIG_SDA_GPIO, CONFIG_SCL_GPIO, CONFIG_RESET_GPIO);
+  spi_master_init(&screen, CONFIG_MOSI_GPIO, CONFIG_SCLK_GPIO, CONFIG_CS_GPIO, CONFIG_DC_GPIO, CONFIG_RESET_GPIO);
   ssd1306_init(&screen, 128, 64);
   ssd1306_contrast(&screen, 0xFF);
 }
